@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_crud_http/core.dart';
-import '../controller/product_list_controller.dart';
 
 class ProductListView extends StatefulWidget {
   const ProductListView({Key? key}) : super(key: key);
@@ -41,23 +41,87 @@ class ProductListView extends StatefulWidget {
                 physics: const ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   Map<String, dynamic> item = controller.products[index];
-                  return Card(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.grey[200],
-                        backgroundImage: NetworkImage(
-                          item["photo"],
+                  return Dismissible(
+                    key: UniqueKey(),
+                    onDismissed: (detail) {},
+                    confirmDismiss: (direction) async {
+                      bool confirm = false;
+                      await showDialog<void>(
+                        context: context,
+                        barrierDismissible: true,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text('Confirm'),
+                            content: SingleChildScrollView(
+                              child: ListBody(
+                                children: const <Widget>[
+                                  Text(
+                                      'Are you sure you want to delete this item?'),
+                                ],
+                              ),
+                            ),
+                            actions: <Widget>[
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.grey[600],
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Text("No"),
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.blueGrey,
+                                ),
+                                onPressed: () {
+                                  confirm = true;
+                                  Navigator.pop(context);
+                                },
+                                child: const Text("Yes"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                      if (confirm) {
+                        controller.doDelete(item["id"]);
+                        return Future.value(true);
+                      }
+                      return Future.value(false);
+                    },
+                    child: Card(
+                      child: ListTile(
+                        onTap: () async {
+                          await Get.to(ProductFormView(item: item));
+                          controller.getProducts();
+                        },
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.grey[200],
+                          backgroundImage: NetworkImage(
+                            item["photo"],
+                          ),
                         ),
+                        title: Text(item["product_name"]),
+                        subtitle: Text("${item["price"]} USD"),
                       ),
-                      title: Text(item["product_name"]),
-                      subtitle: Text("${item["price"]} USD"),
-                    ),
+                    ).animate(delay: 1000.ms).fadeIn(delay: 500.ms),
                   );
                 },
               ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(
+          Icons.add,
+          size: 24.0,
+        ),
+        onPressed: () async {
+          await Get.to(ProductFormView());
+          controller.getProducts();
+        },
       ),
     );
   }

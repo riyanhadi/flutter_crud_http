@@ -1,5 +1,5 @@
 /*
-We believe, the class name must be unique.
+We believe, the class name must be unique. 
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
@@ -7,6 +7,8 @@ export 'package:flutter_crud_http/module/dashboard/controller/dashboard_controll
 export 'package:flutter_crud_http/module/dashboard/view/dashboard_view.dart';
 export 'package:flutter_crud_http/module/favorite/controller/favorite_controller.dart';
 export 'package:flutter_crud_http/module/favorite/view/favorite_view.dart';
+export 'package:flutter_crud_http/module/login/controller/login_controller.dart';
+export 'package:flutter_crud_http/module/login/view/login_view.dart';
 export 'package:flutter_crud_http/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:flutter_crud_http/module/main_navigation/view/main_navigation_view.dart';
 export 'package:flutter_crud_http/module/order/controller/order_controller.dart';

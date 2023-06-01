@@ -1,6 +1,7 @@
 {
     "openai_key": "",
     "modules": [
+        "login",
         "product_list",
         "product_form"
     ]

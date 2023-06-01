@@ -32,4 +32,9 @@ class ProductListController extends State<ProductListView>
     await getProducts();
     setState(() {});
   }
+
+  doDelete(int id) async {
+    await ProductService().delete(id);
+    await getProducts();
+  }
 }
