@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/service/product_service.dart';
-import 'package:hyper_ui/state_util.dart';
+import 'package:flutter_crud_http/service/product_service.dart';
+import 'package:flutter_crud_http/state_util.dart';
 import '../view/product_list_view.dart';
 
 class ProductListController extends State<ProductListView>

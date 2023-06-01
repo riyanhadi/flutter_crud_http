@@ -1,6 +1,6 @@
-import 'package:hyper_ui/core.dart';
+import 'package:flutter_crud_http/core.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/debug.dart';
+import 'package:flutter_crud_http/debug.dart';
 
 void main() async {
   await initialize();

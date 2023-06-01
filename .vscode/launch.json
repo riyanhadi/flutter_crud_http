@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "hyper_ui",
+            "name": "flutter_crud_http",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "hyper_ui (profile mode)",
+            "name": "flutter_crud_http (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "hyper_ui (release mode)",
+            "name": "flutter_crud_http (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

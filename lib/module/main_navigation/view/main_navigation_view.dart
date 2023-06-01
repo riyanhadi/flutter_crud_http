@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:flutter_crud_http/core.dart';
 
 class MainNavigationView extends StatefulWidget {
   const MainNavigationView({Key? key}) : super(key: key);

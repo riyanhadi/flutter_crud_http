@@ -1,5 +1,4 @@
-
-import 'package:hyper_ui/core.dart';
+import 'package:flutter_crud_http/core.dart';
 import 'package:flutter/material.dart';
 
 class QDatePicker extends StatefulWidget {
@@ -95,4 +94,3 @@ class _QDatePickerState extends State<QDatePicker> {
     );
   }
 }
-

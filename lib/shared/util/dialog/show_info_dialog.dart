@@ -1,5 +1,5 @@
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:flutter_crud_http/core.dart';
 import 'package:flutter/material.dart';
 
 Future showInfoDialog(String message) async {
@@ -54,12 +54,7 @@ Future showInfoDialog(String message) async {
                 ],
               ),
             ),
-          )
-              .animate(
-                  
-                  )
-              .fade()
-              .shake(),
+          ).animate().fade().shake(),
         ),
       );
     },

@@ -1,4 +1,4 @@
-package com.example.hyper_ui
+package com.example.flutter_crud_http
 
 import io.flutter.embedding.android.FlutterActivity
 

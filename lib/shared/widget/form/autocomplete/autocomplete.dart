@@ -1,4 +1,4 @@
-import 'package:hyper_ui/core.dart';
+import 'package:flutter_crud_http/core.dart';
 import 'package:flutter/material.dart';
 
 class QAutoComplete extends StatefulWidget {
@@ -84,9 +84,6 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                   ),
                 );
               },
-              
-              
-              
               onSelected: (Map map) {
                 String? label = map["label"];
                 dynamic value = map["value"];

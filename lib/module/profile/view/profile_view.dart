@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:flutter_crud_http/core.dart';
 import '../controller/profile_controller.dart';
 
 class ProfileView extends StatefulWidget {

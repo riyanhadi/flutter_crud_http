@@ -1,4 +1,4 @@
-import 'package:hyper_ui/core.dart';
+import 'package:flutter_crud_http/core.dart';
 
 class Format {}
 

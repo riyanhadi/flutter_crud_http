@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
+import 'package:flutter_crud_http/state_util.dart';
 import '../view/product_form_view.dart';
 
-class ProductFormController extends State<ProductFormView> implements MvcController {
+class ProductFormController extends State<ProductFormView>
+    implements MvcController {
   static late ProductFormController instance;
   late ProductFormView view;
 
