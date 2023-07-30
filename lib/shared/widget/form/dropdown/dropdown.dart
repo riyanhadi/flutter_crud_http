@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class QDropdownField extends StatefulWidget {
@@ -56,9 +55,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
   }
 
   setAllItemsToFalse() {
-    for (var item in items) {
-      
-    }
+    for (var item in items) {}
   }
 
   Map<String, dynamic>? get currentValue {
@@ -167,4 +164,3 @@ class _QDropdownFieldState extends State<QDropdownField> {
     );
   }
 }
-

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class QCheckField extends StatefulWidget {
@@ -62,8 +61,6 @@ class _QCheckFieldState extends State<QCheckField> {
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,
-      
-      
       validator: (value) => widget.validator!(items),
       enabled: true,
       builder: (FormFieldState<bool> field) {
@@ -106,4 +103,3 @@ class _QCheckFieldState extends State<QCheckField> {
     );
   }
 }
-

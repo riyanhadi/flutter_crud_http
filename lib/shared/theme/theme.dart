@@ -4,45 +4,80 @@ import 'package:flutter/material.dart';
 
 ThemeData getDefaultTheme() {
   return ThemeData().copyWith(
+    useMaterial3: true,
+    colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
     primaryColor: primaryColor,
     scaffoldBackgroundColor: Colors.grey[300],
     appBarTheme: AppBarTheme(
-      backgroundColor: appbarBackgroundColor,
+      backgroundColor: primaryColor,
       elevation: 0.6,
       titleTextStyle: GoogleFonts.lato(
-        color: Colors.blueGrey[700],
+        color: whiteColor,
         fontWeight: FontWeight.bold,
       ),
       iconTheme: IconThemeData(
-        color: Colors.blueGrey[700],
+        color: whiteColor,
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       unselectedItemColor: Colors.grey,
-      selectedItemColor: Colors.blueGrey[900]!,
+      selectedItemColor: primaryColor,
+      unselectedLabelStyle: TextStyle(
+        color: whiteColor,
+      ),
+      selectedLabelStyle: TextStyle(
+        color: whiteColor,
+      ),
     ),
     tabBarTheme: TabBarTheme(
       unselectedLabelColor: Colors.grey,
       labelColor: Colors.blueGrey[900]!,
     ),
     textTheme: TextTheme(
-      titleSmall: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
+      titleSmall: GoogleFonts.roboto(
+        color: textColor,
       ),
-      titleMedium: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
+      titleMedium: GoogleFonts.roboto(
+        color: textColor,
       ),
-      titleLarge: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
+      titleLarge: GoogleFonts.roboto(
+        color: textColor,
       ),
-      bodyLarge: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
+      bodyLarge: GoogleFonts.roboto(
+        color: textColor,
       ),
-      bodySmall: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
+      bodySmall: GoogleFonts.roboto(
+        color: textColor,
       ),
-      bodyMedium: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
+      bodyMedium: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      labelLarge: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      labelMedium: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      labelSmall: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      displayLarge: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      displayMedium: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      displaySmall: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      headlineLarge: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      headlineMedium: GoogleFonts.roboto(
+        color: textColor,
+      ),
+      headlineSmall: GoogleFonts.roboto(
+        color: textColor,
       ),
     ),
   );

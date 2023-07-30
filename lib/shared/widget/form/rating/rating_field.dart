@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../core.dart';
@@ -64,4 +63,3 @@ class _QRatingFieldState extends State<QRatingField> {
     );
   }
 }
-

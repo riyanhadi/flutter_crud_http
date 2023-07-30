@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class QTimePicker extends StatefulWidget {
@@ -104,4 +103,3 @@ class _QTimePickerState extends State<QTimePicker> {
     );
   }
 }
-

@@ -6,7 +6,7 @@ import 'package:flutter_crud_http/core.dart';
 class ProductService {
   Future<List> getProducts() async {
     var response = await Dio().get(
-      "https://capekngoding.com/089679884144/api/products",
+      "https://capekngoding.com/6289679884144/api/products",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -19,7 +19,7 @@ class ProductService {
 
   generateDummy() async {
     await Dio().delete(
-      "https://capekngoding.com/089679884144/api/products/action/delete-all",
+      "https://capekngoding.com/6289679884144/api/products/action/delete-all",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +31,7 @@ class ProductService {
       final faker = Faker.instance;
       print(faker.image.loremPicsum.image());
       await Dio().post(
-        "https://capekngoding.com/089679884144/api/products",
+        "https://capekngoding.com/6289679884144/api/products",
         options: Options(
           headers: {
             "Content-Type": "application/json",
@@ -57,7 +57,7 @@ class ProductService {
     required String description,
   }) async {
     var response = await Dio().post(
-      "https://capekngoding.com/089679884144/api/products",
+      "https://capekngoding.com/6289679884144/api/products",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -83,7 +83,7 @@ class ProductService {
     required String description,
   }) async {
     var response = await Dio().post(
-      "https://capekngoding.com/089679884144/api/products/$id",
+      "https://capekngoding.com/6289679884144/api/products/$id",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ class ProductService {
           "Content-Type": "application/json",
         },
       ),
-      "https://capekngoding.com/089679884144/api/products/$id",
+      "https://capekngoding.com/6289679884144/api/products/$id",
     );
     print(response.statusCode);
   }

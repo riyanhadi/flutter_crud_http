@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -37,8 +36,7 @@ class _QNumberFieldState extends State<QNumberField> {
   void initState() {
     super.initState();
 
-    RegExp r = RegExp(r'^[0-9]+(\.[0-9]+)?$');
-    value = widget.value?.replaceAll(RegExp(r'^[0-9,]+$'), '');
+    value = widget.value ?? "0";
     controller = TextEditingController(
       text: formattedValue,
     );
@@ -98,4 +96,3 @@ class _QNumberFieldState extends State<QNumberField> {
     );
   }
 }
-

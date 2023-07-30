@@ -1,11 +1,10 @@
 import 'package:flutter_crud_http/core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_crud_http/debug.dart';
 
 void main() async {
   await initialize();
 
-  Get.mainTheme.value = getDarkTheme();
+  Get.mainTheme.value = getDefaultTheme();
   runMainApp();
 }
 
@@ -26,7 +25,7 @@ class MainApp extends StatelessWidget {
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          home: const LoginView(),
+          home: UserListView(),
           builder: (context, child) => debugView(
             context: context,
             child: child,

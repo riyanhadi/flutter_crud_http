@@ -1,8 +1,13 @@
 {
-    "openai_key": "",
     "modules": [
         "login",
         "product_list",
-        "product_form"
-    ]
+        "product_form",
+        "user_list",
+        "user_form"
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "unfreezed": true,
+    "use_cubit": false
 }

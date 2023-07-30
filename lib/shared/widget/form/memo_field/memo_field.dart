@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class QMemoField extends StatefulWidget {
@@ -71,4 +70,3 @@ class _QMemoFieldState extends State<QMemoField> {
     );
   }
 }
-

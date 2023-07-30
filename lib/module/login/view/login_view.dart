@@ -15,7 +15,7 @@ class LoginView extends StatefulWidget {
               height: MediaQuery.of(context).size.height * 0.2,
             ),
             Container(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),

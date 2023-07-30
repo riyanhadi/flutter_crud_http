@@ -1,10 +1,7 @@
-
 import 'dart:io';
-import 'package:dio/dio.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:flutter_crud_http/core.dart';
 
 class QImagePicker extends StatefulWidget {
   final String label;
@@ -163,8 +160,8 @@ class _QImagePickerState extends State<QImagePicker> {
                   ? null
                   : DecorationImage(
                       image: NetworkImage(
-                        imageUrl == null
-                            ? "https://i.ibb.co/S32HNjD/no-image.jpg"
+                        imageUrl == null || imageUrl == ""
+                            ? "https://smkassaidiyah.prospak.id/img/blank.png"
                             : imageUrl!,
                       ),
                       fit: BoxFit.cover,
@@ -218,8 +215,6 @@ class _QImagePickerState extends State<QImagePicker> {
                 builder: (FormFieldState<bool> field) {
                   return TextFormField(
                     controller: controller,
-                    
-
                     obscureText: widget.obscure,
                     readOnly: true,
                     decoration: InputDecoration(
@@ -239,13 +234,14 @@ class _QImagePickerState extends State<QImagePicker> {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  loading ? Colors.grey[300] : Colors.blueGrey,
+                                  loading ? Colors.grey[300] : primaryColor,
                             ),
                             onPressed: () => browsePhoto(),
-                            child: const Text(
+                            child: Text(
                               "Browse",
                               style: TextStyle(
-                                fontSize: 10.0,
+                                fontSize: 9.0,
+                                color: loading ? primaryColor : whiteColor,
                               ),
                             ),
                           ),
@@ -265,4 +261,3 @@ class _QImagePickerState extends State<QImagePicker> {
     );
   }
 }
-

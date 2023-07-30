@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class QSwitch extends StatefulWidget {
@@ -38,8 +37,6 @@ class _QSwitchState extends State<QSwitch> {
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,
-      
-      
       validator: (value) => widget.validator!(items),
       enabled: true,
       builder: (FormFieldState<bool> field) {
@@ -83,4 +80,3 @@ class _QSwitchState extends State<QSwitch> {
     );
   }
 }
-
